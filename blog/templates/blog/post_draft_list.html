@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>Draft Posts</h2>
+    {% for post in posts %}
+        <article class="post">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.text }}</p>
+            <!-- You can display other information about the post here -->
+        </article>
+    {% empty %}
+        <p>No draft posts found.</p>
+    {% endfor %}
+{% endblock %}
